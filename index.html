@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"
+        integrity="sha256-HkXXtFRaflZ7gjmpjGQBENGnq8NIno4SDNq/3DbkMgo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Application</title>
+</head>
+
+<body class="bg-dark text-white">
+    <nav class="navbar bg-success">
+        <a href="#" class="navbar-brand text-white">Application manager</a>
+    </nav>
+    <br>
+    <header id="addStudent" class="text-center">
+        <button id="new-student-btn" class="btn btn-success"><i class="fas fa-user-plus"></i> Add new student</button>
+    </header>
+    <main class="container">
+         <div class="row justify-content-between">
+        <section class="col-md-6  mt-4  " id="add-student-form">
+            <form action="" class="border border-info p-3 add-student-form" id="form">
+                <h2>Add student</h2>
+                <p id="form-error"></p>
+                <div class="form-group">
+                    <label for="name" class="required m-2">Name:</label>
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Enter user" required>
+                    <label for="email" class="required m-2">Email:</label>
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Email" required>
+                    <label for="age" class="required m-2"> Age:</label>
+                    <input type="number" name="age" id="age" class="form-control" placeholder="Age" min="6" required>
+                    <label for="phone" class="required m-2">Phone number:</label>
+                    <input type="tel" name="phone" id="phone" class="form-control" placeholder="012-345-6789" required
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                    <label for="communication" class="required m-2" id="pref-comunication">Preferred way of
+                        communication</label><br>
+                    <div id="radio-btn " >
+                        <label for="way">
+                            <input type="radio" class="ml-5" id="email-radio" name="way" value="email" required>Email
+                        </label>
+                        <label for="way">
+                            <input type="radio" class="ml-5" id="phone-radio" name="way" value="phone">Phone
+                        </label>
+                    </div>
+                    <div class="text-label">
+                        <label for="englishLevel" class="required m-2"> English level:</label>
+                        <select id="level" class="form-control" name="englishLevel" required>
+                            <option value="-">-</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="elementary">Elementary </option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="upper-intermediate">Upper-Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                            <option value="proficiency">Proficiency</option>
+                        </select>
+                    </div>
+                    <label for="startdate" class="required m-2">Available to start:</label><br>
+                    <input type="date" class="form-control" id="start-date" name="startdate"
+                        placeholder="Available to start" required>
+                    <textarea name="skills" class="form-control mt-4" id="skills" cols="30" rows="10"
+                        placeholder="Technical Skills and Courses"></textarea>
+                    <textarea name="personalpresentation" class="form-control mt-4" id="reasons" cols="30" rows="10"
+                        placeholder="Reason for joining the program"></textarea>
+                    <div id="checkbox-label" class="mt-4 text-center">
+                        <input type="checkbox" id="home-study" name="homestudy" value="Study from home" >
+                        <label for="homestudy">Study from home</label>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" name="submit" id="insert" class="btn btn-primary">
+                        Add student
+                    </button>
+                </div>
+            </form>
+        </section>
+        <aside class="col-md-6  mt-4">
+            <div id="student-collection"></div>
+        </aside>
+       </div>
+    </main>
+    <footer class="page-footer font-small bg-success">
+        <div class="footer-copyright text-center py-3"> © 2020 Copyright </div>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

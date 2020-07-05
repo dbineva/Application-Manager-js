@@ -1,0 +1,31 @@
+html, body{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+main{
+    flex: 1 0 auto;
+}
+
+.input-control{
+    border-radius: 4px;
+    margin-left: 8px;
+
+}
+
+.required:after{
+    content: " *";
+    color: red;
+
+}
+
+#add-student-form{
+    display: none;
+}
+
+footer{
+    margin-top: 20px;
+    flex-shrink: 0;
+}
